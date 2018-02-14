@@ -1,0 +1,13 @@
+
+
+
+# The build step builds the image using the node:argon official node image
+# and then copies the source into the image. This step only builds the image.
+# Note:- the . at the indicates the current directory where Dockerfile is located
+
+docker build -t node-test:0.1 .
+
+
+# run docker image:
+docker run -p 3000:3000 -ti node-test:0.1
+
